@@ -6,7 +6,6 @@
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 5px 1px rgb(0 0 0 / 20%);
-    transition: color .35s, background-color .35s;
 
     &.dark-mode {
         color: $white;
@@ -24,7 +23,6 @@
         .icon {
             width: 1.2em;
             height: 1.2em;
-            transition: fill .35s;
             --icon-color: $dark-blue;
         }
 

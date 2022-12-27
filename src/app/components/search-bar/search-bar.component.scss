@@ -1,0 +1,51 @@
+@import './../../../assets/variables';
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+    box-shadow: 0 0 5px 1px rgb(0 0 0 / 20%);
+    border-radius: 5px;
+
+    label {
+        position: absolute;
+        left: -1000vw;
+    }
+
+    &.dark-mode {
+        background-color: $dark-blue;
+
+        .icon {
+            fill: $white;
+        }
+
+        input[type=search] {
+            color: $white;
+
+            &::placeholder {
+                color: $white;
+            }
+        }
+    }
+}
+
+.search-bar-button {
+    border: none;
+    background-color: transparent;
+    display: grid;
+    place-content: center;
+
+    .icon {
+        width: 1.2em;
+        height: 1.2em;
+    }
+}
+
+input[type=search] {
+    border: none;
+    font-size: .95rem;
+    flex-grow: 1;
+    outline: none;
+    background-color: transparent;
+}

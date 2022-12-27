@@ -1,0 +1,11 @@
+<div class="search-bar-container" [class.dark-mode]="isDarkMode">
+    <button class="search-bar-button" (click)="handleChange()">
+        <svg class="icon">
+            <use xlink:href="/assets/sprites/icon-utilities.svg#icon-search"></use>
+        </svg>
+    </button>
+    <label [attr.for]="label" [attr.aria-label]="label">
+        {{label}}
+    </label>
+    <input [attr.placeholder]="placeholder" [(ngModel)]="value" (keyup.enter)="handleChange()" type="search" [attr.name]="label" [attr.id]="label">
+</div>
