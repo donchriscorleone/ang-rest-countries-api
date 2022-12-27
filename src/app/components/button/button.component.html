@@ -1,0 +1,6 @@
+<button class="btn" [class.dark-mode]="isDarkMode" (click)="handleClick()" [attr.aria-label]="label" [class.btn-icon]="hasIcon">
+    <ng-container *ngIf="hasIcon">
+        <ng-content select=".icon"></ng-content>
+    </ng-container>
+    <span class="button-text">{{ label }}</span>
+</button>

@@ -1,0 +1,9 @@
+.box {
+    background-color: #fff;
+    transition: background-color .35s;
+    margin: 10px 0;
+
+    &.dark-mode {
+        background-color: #111;
+    }
+}

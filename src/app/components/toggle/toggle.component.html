@@ -1,0 +1,9 @@
+<div class="toggle-container" [class.dark-mode]="isDark">
+    <label for="toggle" aria-label="Dark Mode">
+        <svg class="icon">
+            <use xlink:href="/assets/sprites/icon-utilities.svg#icon-moon"></use>
+        </svg>
+        <span class="toggle-label">Dark Mode</span>
+    </label>
+    <input type="checkbox" name="toggle" id="toggle" (change)="handleToggle()">
+</div>

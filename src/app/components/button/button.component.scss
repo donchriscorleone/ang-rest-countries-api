@@ -1,0 +1,38 @@
+@import './../../../assets/variables';
+
+
+.btn {
+    padding: .35em 1.5em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgb(0 0 0 / 20%);
+    transition: color .35s, background-color .35s;
+
+    &.dark-mode {
+        color: $white;
+        background-color: $dark-blue;
+    }
+}
+
+.btn.btn-icon {
+    display: flex;
+    align-items: center;
+    gap: .7em;
+
+    &::ng-deep {
+
+        .icon {
+            width: 1.2em;
+            height: 1.2em;
+            transition: fill .35s;
+            --icon-color: $dark-blue;
+        }
+
+        &.dark-mode {
+            .icon {
+                --icon-color: $white;
+            }
+        }
+
+    }
+}
