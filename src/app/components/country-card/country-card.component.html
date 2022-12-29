@@ -1,0 +1,20 @@
+<div class="country-card" *ngIf="country" [class.dark-mode]="isDarkMode">
+   <div class="card-wrapper">
+        <div class="card-header">
+            <img [attr.src]="country?.flags?.svg" [attr.alt]="'Flag of ' + country?.name?.common">
+        </div>
+        <div class="card-content">
+            <a class="card-title" target="_blank" href="#">{{country?.name?.common}}</a>
+
+            <div class="card-sub-content">
+                <span class="category">
+                    <em class="population">Population</em>: {{country?.population|number}}
+                </span>
+                <span class="category">
+                    <em class="region">Region</em>: {{country?.region}}</span>
+                <span class="category">
+                    <em class="capital">Capital: </em>{{country?.capital?.[0]}}</span>
+            </div>
+        </div>
+   </div>
+</div>

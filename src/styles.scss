@@ -18,11 +18,10 @@ ul, ol {
     list-style: none;
 }
 
-
-.dark-mode {
+* {
     transition: color .35s, background-color .35s, fill .35s;
 
-    & * {
+    &.dark-mode {
         transition: color .35s, background-color .35s, fill .35s;
-    }
+    }    
 }
