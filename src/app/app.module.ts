@@ -9,6 +9,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CountryCardComponent } from './components/country-card/country-card.component';
+import { SelectComponent } from './components/select/select.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CountryCardComponent } from './components/country-card/country-card.com
     ButtonComponent,
     SearchBarComponent,
     CountryCardComponent,
+    SelectComponent,
   ],
   imports: [
     BrowserModule,

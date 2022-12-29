@@ -1,6 +1,6 @@
 @import './../../../assets/variables';
 
-.toggle-container {
+.toggle-container {    
     input[type=checkbox] {
         position: absolute;
         left: -1000vw;
@@ -23,6 +23,7 @@ label {
     gap: .85em;
     font-weight: 600;
     font-size: .95rem;
+    cursor: pointer;
 }
 
 .icon {
