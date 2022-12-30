@@ -1,0 +1,50 @@
+@import './../../../assets/variables';
+
+.home-section {
+    &.dark-mode {
+        background-color: $very-dark-blue-bg;
+    }
+}
+
+.home-section-wrapper {
+    padding: 3rem;
+}
+
+.tools {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.countries-wrapper {
+    max-width: 25em;
+    margin-inline: auto;
+    margin-top: 3rem;
+}
+
+.countries-container {
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+@media screen and (min-width: 65em) {
+    .tools {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        app-search-bar {
+            flex-grow: .5;
+        }
+    }
+
+    .countries-wrapper {
+        max-width: 100vw;
+    }
+    
+    .countries-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+}

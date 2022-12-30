@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CountryCardComponent } from './components/country-card/country-card.component';
 import { SelectComponent } from './components/select/select.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SelectComponent } from './components/select/select.component';
     SearchBarComponent,
     CountryCardComponent,
     SelectComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

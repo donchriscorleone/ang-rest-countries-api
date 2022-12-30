@@ -21,14 +21,19 @@ export class CountryService {
   }
 
   getAll() {
-    this.http.get<ICountry[]>(this.api + "all").pipe(
-      takeUntil(this.taken),
-      filter(x => !!x && window.localStorage.getItem('countries') === null),
-      tap(x => this.taken.next(true))
-    ).subscribe(res => {
-      console.warn("TESTING");
-      this.storeData(res);
-    })
+    return this.http.get<ICountry[]>(this.api + "all").pipe(
+      map(x => {
+        if (!!x && window.localStorage.getItem('countries') === null) {
+          this.storeData(x);
+        }
+        
+        return x;
+      }),
+      tap(x => {
+        this.taken.next(true);
+        this.storeData(x);
+      })
+    )
   }
 
   getCountries$() {

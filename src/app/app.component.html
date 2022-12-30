@@ -1,9 +1,10 @@
 <header [class.dark-mode]="isDark">
     <div class="header-wrapper">
         <h1 class="header-title">Where in the world?</h1>
-        <app-toggle (toggled)="isDark = $event"></app-toggle>
+        <app-toggle (toggled)="handleToggle($event)"></app-toggle>
     </div>
 </header>
+<router-outlet></router-outlet>
 
 <!-- <div class="box" [class.dark-mode]="isDark">
     <app-toggle (toggled)="isDark = $event"></app-toggle>

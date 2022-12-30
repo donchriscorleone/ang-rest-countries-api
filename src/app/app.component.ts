@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { ICountry } from './components/country-card/country-card.component';
 import { ISelectOption } from './components/select/select.component';
 import { CountryService } from './services/country.service';
+import { SharedService } from './services/shared/shared.service';
 
 @Component({
   selector: 'app-root',
@@ -12,26 +13,11 @@ import { CountryService } from './services/country.service';
 export class AppComponent {
   isDark: boolean = false;
 
-  germany$: Observable<ICountry>;
-  options: ISelectOption<string>[] = [];
-
-  constructor(private countryService: CountryService) {
-    this.germany$ = this.countryService.getCountryByName$('germany');
-    this.germany$.subscribe(x => {
-      console.warn(x);
-    })
-
-    this.options = [
-      {name: 'Filter by Region', value: ''},
-      {name: 'Africa', value: 'africa'},
-      {name: 'America', value: 'america'},
-      {name: 'Asia', value: 'asia'},
-      {name: 'Europe', value: 'europe'},
-      {name: 'Oceania', value: 'oceania'},
-    ]
+  constructor(private sharedService: SharedService) {
+    this.sharedService.getMode$().subscribe(x => this.isDark = x);
   }
 
-  onOptionSelect(value: ISelectOption<string>) {
-    console.warn(value)
+  handleToggle(value: boolean) {
+    this.sharedService.setMode(value);
   }
 }
