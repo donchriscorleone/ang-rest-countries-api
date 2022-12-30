@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CountryCardComponent } from './components/country-card/country-card.component';
 import { SelectComponent } from './components/select/select.component';
 import { HomeComponent } from './pages/home/home.component';
+import { FilterCountryPipe } from './pages/home/filter-country.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomeComponent } from './pages/home/home.component';
     CountryCardComponent,
     SelectComponent,
     HomeComponent,
+    FilterCountryPipe,
   ],
   imports: [
     BrowserModule,

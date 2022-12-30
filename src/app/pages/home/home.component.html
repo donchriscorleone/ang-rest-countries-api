@@ -1,14 +1,14 @@
 <div class="home-section" [class.dark-mode]="isDarkMode">
     <div class="home-section-wrapper">
         <div class="tools">
-            <app-search-bar [isDarkMode]="isDarkMode"></app-search-bar>
+            <app-search-bar [isDarkMode]="isDarkMode" (searched)="onSearched($event)"></app-search-bar>
             <app-select [options]="options" [isDarkMode]="isDarkMode" (onOptionSelect)="onOptionSelect($event)"></app-select>
         </div>
 
         <div class="countries-wrapper">
             <div class="countries-container">
-                <ng-container *ngIf="firstEightCountries">
-                    <app-country-card *ngFor="let country of firstEightCountries" [country]="country" [isDarkMode]="isDarkMode"></app-country-card>
+                <ng-container *ngIf="countries">
+                    <app-country-card *ngFor="let country of countries|filterCountry:countryName:region" [country]="country" [isDarkMode]="isDarkMode"></app-country-card>
                 </ng-container>
             </div>
         </div>

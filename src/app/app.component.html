@@ -4,7 +4,9 @@
         <app-toggle (toggled)="handleToggle($event)"></app-toggle>
     </div>
 </header>
-<router-outlet></router-outlet>
+<main>
+    <router-outlet></router-outlet>
+</main>
 
 <!-- <div class="box" [class.dark-mode]="isDark">
     <app-toggle (toggled)="isDark = $event"></app-toggle>

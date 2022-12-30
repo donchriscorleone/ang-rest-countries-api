@@ -7,5 +7,5 @@
     <label [attr.for]="label" [attr.aria-label]="label">
         {{label}}
     </label>
-    <input [attr.placeholder]="placeholder" [(ngModel)]="value" (keyup.enter)="handleChange()" type="search" [attr.name]="label" [attr.id]="label">
+    <input [attr.placeholder]="placeholder" [(ngModel)]="value" (keyup)="handleChange()" type="search" [attr.name]="label" [attr.id]="label">
 </div>

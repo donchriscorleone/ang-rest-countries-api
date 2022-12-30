@@ -13,8 +13,9 @@ import { SharedService } from 'src/app/services/shared/shared.service';
 export class HomeComponent implements OnInit {
   isDarkMode: boolean = false;
   options: ISelectOption<string>[] = [];
-  firstEightCountries: ICountry[] = [];
   countries: ICountry[] = [];
+  region: string = '';
+  countryName: string = '';
 
 constructor(private sharedService: SharedService, private countryService: CountryService,) { }
 
@@ -30,12 +31,15 @@ constructor(private sharedService: SharedService, private countryService: Countr
     ];
     this.countryService.getAll().subscribe(c => {
       this.countries = c;
-      this.firstEightCountries = c.slice(0, 8);
     })
   }
 
-  onOptionSelect(value: ISelectOption<string>) {
-    console.warn(value)
+  onOptionSelect(selected: string) {
+    this.region = selected;
+  }
+
+  onSearched(value: string) {
+    this.countryName = value;
   }
 
 }

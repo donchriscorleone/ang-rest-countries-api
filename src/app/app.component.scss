@@ -1,5 +1,11 @@
 @import './../assets/variables';
 
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 header {
     box-shadow: 0 0 10px 1px rgba($color: #000000, $alpha: 0.15);
 }
@@ -23,6 +29,11 @@ header.dark-mode {
     .header-title {
         color: $white;
     }
+}
+
+main {
+    height: 100%;
+    flex-grow: 1;
 }
 
 @media screen and (min-width: 50em) {
