@@ -66,7 +66,7 @@ export interface ICountry {
     [key: string]: string
   },
   name: {
-    [key: string]: string
+    [key: string]: string | {[key: string]: {common: string, official: string}}
   },
   population: number,
   postalCode: {

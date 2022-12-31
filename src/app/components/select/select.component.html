@@ -1,8 +1,5 @@
 <div class="form-field" [class.dark-mode]="isDarkMode">
     <label [attr.for]="name">Select: </label>
-    <svg class="icon custom-arrow">
-        <use xlink:href="/assets/sprites/icon-utilities.svg#icon-chevron"></use>
-    </svg>
 
     <select [name]="name" [attr.id]="name" (change)="handleOnChange($event)">
         <option *ngFor="let option of options" [attr.value]="option.value">{{option.name}}</option>

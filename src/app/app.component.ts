@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import { ICountry } from './components/country-card/country-card.component';
-import { ISelectOption } from './components/select/select.component';
-import { CountryService } from './services/country.service';
 import { SharedService } from './services/shared/shared.service';
 
 @Component({

@@ -1,11 +1,6 @@
 @import './../../../assets/variables';
 
-:host {
-    height: 100%;
-}
-
 .home-section {
-    height: 100%;
     &.dark-mode {
         background-color: $very-dark-blue-bg;
     }

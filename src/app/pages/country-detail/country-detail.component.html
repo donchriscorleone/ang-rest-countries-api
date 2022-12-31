@@ -1,0 +1,44 @@
+<section class="detail-section" [class.dark-mode]="isDarkMode" *ngIf="!!country">
+    <div class="detail-wrapper">
+        <div class="detail-header">
+            <app-button (clicked)="goBack()" [isDarkMode]="isDarkMode" label="Back" [hasIcon]="true">
+                <svg class="icon">
+                    <use xlink:href="/assets/sprites/icon-utilities.svg#icon-arrow"></use>
+                </svg>
+            </app-button>
+        </div>
+    
+        <div class="detail-content">
+            <div class="detail-content-wrapper">
+                <div class="country-detail-img-container">
+                    <img [attr.src]="country?.flags?.svg" [attr.alt]="'Flag of ' + country?.name?.common">
+                </div>
+                <div class="country-details">
+                    <span class="country-title">{{country?.name?.common}}</span>
+                    <div class="country-more-details">
+                        <ul>
+                            <li><em>Official Name: </em>{{country?.name?.official}}</li>
+                            <li><em>Population: </em>{{country?.population}}</li>
+                            <li><em>Region: </em>{{country?.region}}</li>
+                            <li><em>Sub Region: </em>{{country?.subregion}}</li>
+                            <li><em>Capital: </em>{{country?.capital?.[0]}}</li>
+                        </ul>
+                        <ul>
+                            <li><em>Top Level Domain: </em>{{country?.tld?.[0]}}</li>
+                            <li><em>Currencies: </em>{{country?.currencies?.EUR?.name}}</li>
+                            <li><em>Languages: </em><ng-container *ngFor="let lang of languages; last as last">{{lang}}{{last ? '' : ', '}}</ng-container></li>
+                        </ul>
+                    </div>
+                    <div class="country-borders">
+                        <span class="border-countries">Border Countries: </span>
+                        <ul class="list-border-countries" *ngIf="borders.length > 0">
+                            <li *ngFor="let c of borders|filterCountry:'':'':3">
+                                <app-button (clicked)="navigateBorder(c)" [isDarkMode]="isDarkMode" [label]="c?.name?.common ?? ''"></app-button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

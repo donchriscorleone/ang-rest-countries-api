@@ -12,14 +12,6 @@
             background-color: $dark-blue;
         }
     }
-
-    .custom-arrow {
-        position: absolute;
-        width: 1em;
-        height: 1em;
-        right: .75em;
-        pointer-events: none;
-    }
 }
 
 label {
@@ -32,10 +24,10 @@ select {
     padding-right: 3.75em;
     border-radius: 5px;
     border: 0;
+    border-right: .75em solid transparent;
     outline: none;
     box-shadow: 0 0 5px 1px rgba($color: #000000, $alpha: 0.2);
     font-size: .95rem;
     cursor: pointer;
     color: $very-dark-blue;
-    appearance: none;
 }

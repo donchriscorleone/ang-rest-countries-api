@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
-import { Subject } from 'rxjs';
-import { filter, first, map, take, takeUntil, tap } from 'rxjs/operators';
+import { BehaviorSubject, of, Subject } from 'rxjs';
+import { filter, first, map, switchMap, take, takeUntil, tap } from 'rxjs/operators';
 
 import { ICountry } from '../components/country-card/country-card.component';
 
@@ -11,16 +11,24 @@ import { ICountry } from '../components/country-card/country-card.component';
 export class CountryService {
   private api = "https://restcountries.com/v3.1/";
 
-  private data: Subject<ICountry[]> = new Subject();
+  private data: BehaviorSubject<ICountry[]> = new BehaviorSubject<ICountry[]>([]);
   private taken: Subject<boolean> = new Subject();
 
   constructor(private http: HttpClient) { 
     let storedData = window.localStorage.getItem('countries');
-    let parsed = storedData ? JSON.parse(storedData) : [];
-    this.data.next(parsed);
+    try {
+      let parsed = storedData ? JSON.parse(storedData) : [];
+      this.data.next(parsed);
+    } catch (e) {
+      this.data.next([]);
+    }
   }
 
   getAll() {
+    return this.getAll$();
+  }
+
+  private getAll$() {
     return this.http.get<ICountry[]>(this.api + "all").pipe(
       map(x => {
         if (!!x && window.localStorage.getItem('countries') === null) {

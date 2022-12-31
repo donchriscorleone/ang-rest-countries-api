@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedService {
-  private isDarkMode$: Subject<boolean> = new Subject();
+  private isDarkMode$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor() { }
 

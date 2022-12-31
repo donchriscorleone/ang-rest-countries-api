@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { filter } from 'rxjs/operators';
+import {  Component, OnInit } from '@angular/core';
 import { ICountry } from 'src/app/components/country-card/country-card.component';
 import { ISelectOption } from 'src/app/components/select/select.component';
 import { CountryService } from 'src/app/services/country.service';
@@ -20,7 +19,6 @@ export class HomeComponent implements OnInit {
 constructor(private sharedService: SharedService, private countryService: CountryService,) { }
 
   ngOnInit(): void {
-    this.sharedService.getMode$().subscribe(x => this.isDarkMode = x);
     this.options = [
       {name: 'Filter by Region', value: ''},
       {name: 'Africa', value: 'africa'},
@@ -32,6 +30,7 @@ constructor(private sharedService: SharedService, private countryService: Countr
     this.countryService.getAll().subscribe(c => {
       this.countries = c;
     })
+    this.sharedService.getMode$().subscribe(x => this.isDarkMode = x);
   }
 
   onOptionSelect(selected: string) {

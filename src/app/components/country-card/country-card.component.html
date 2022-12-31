@@ -4,7 +4,7 @@
             <img [attr.src]="country?.flags?.svg" [attr.alt]="'Flag of ' + country?.name?.common">
         </div>
         <div class="card-content">
-            <a class="card-title" target="_blank" href="#">{{country?.name?.common}}</a>
+            <a class="card-title" [routerLink]="['/country']" [queryParams]="{name: country?.name?.common}">{{country?.name?.common}}</a>
 
             <div class="card-sub-content">
                 <span class="category">

@@ -12,6 +12,7 @@ import { CountryCardComponent } from './components/country-card/country-card.com
 import { SelectComponent } from './components/select/select.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FilterCountryPipe } from './pages/home/filter-country.pipe';
+import { CountryDetailComponent } from './pages/country-detail/country-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FilterCountryPipe } from './pages/home/filter-country.pipe';
     SelectComponent,
     HomeComponent,
     FilterCountryPipe,
+    CountryDetailComponent,
   ],
   imports: [
     BrowserModule,

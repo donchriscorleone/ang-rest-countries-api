@@ -1,39 +1,16 @@
 <header [class.dark-mode]="isDark">
     <div class="header-wrapper">
-        <h1 class="header-title">Where in the world?</h1>
+        <h1 class="header-title"><a routerLink="/">Where in the world?</a></h1>
         <app-toggle (toggled)="handleToggle($event)"></app-toggle>
     </div>
 </header>
-<main>
+<main [class.dark-mode]="isDark">
     <router-outlet></router-outlet>
 </main>
 
-<!-- <div class="box" [class.dark-mode]="isDark">
-    <app-toggle (toggled)="isDark = $event"></app-toggle>
-</div>
-
-<div class="box">
-    <app-select [options]="options" [isDarkMode]="isDark" (onOptionSelect)="onOptionSelect($event)"></app-select>
-</div>
-
-<div class="box">
-    <app-button [isDarkMode]="isDark" label="France"></app-button>
-</div>
-
-
-<div class="box">
-    <app-button [isDarkMode]="isDark" label="Back" [hasIcon]="true">
-        <svg class="icon">
-            <use xlink:href="/assets/sprites/icon-utilities.svg#icon-arrow"></use>
-        </svg>
-    </app-button>
-</div>
-
-<div class="box">
-    <app-search-bar [isDarkMode]="isDark"></app-search-bar>
-</div>
-
-<div class="box">
-    <app-country-card [country]="germany$|async" [isDarkMode]="isDark"></app-country-card>
-</div> -->
-
+<footer [class.dark-mode]="isDark">
+    <div class="attribution">
+        <a href="https://www.instagram.com/devchristopherii">&copy; Coded by Christopher II</a>
+        <a href="https://www.frontendmentor.io">Challenged at Frontend Mentor</a>
+    </div>
+</footer>
