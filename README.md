@@ -1,27 +1,68 @@
-# AngRestCountriesApi
+# Frontend Mentor - REST Countries API with color theme switcher solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
+This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Continued development](#continued-development)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+## Overview
 
-## Code scaffolding
+### The challenge
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Users should be able to:
 
-## Build
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode *(optional)*
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Screenshot
 
-## Running unit tests
+![Desktop at 1440px](./screenshots/Desktop@1440.png)
+![Desktop Detail at 1440px](./screenshots/Detail@1440.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Mobile at 375px](./screenshots/Mobile@375.png)
+![Mobile Detail at 1440px](./screenshots/Detail@375.png)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Links
 
-## Further help
+- Solution URL: [](https://your-solution-url.com)
+- Live Site URL: [](https://your-live-site-url.com)
+## My Process
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+### Built with
+
+- Semantic HTML5 markup
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- Angular
+- SVG Sprites
+- SCSS (Used only for development)
+
+### Continued development
+
+The select component is a simple native select element only. Planning to create a custom select component in the future.
+## Authors
+
+- [@donchriscorleone](https://www.github.com/donchriscorleone)
+
+
+## 🔗 Links
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christopher-ii-lajom-031959211/)
+
+[![instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/devchristopherii)
+
+[![twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://www.twitter.com/topheriidev)
