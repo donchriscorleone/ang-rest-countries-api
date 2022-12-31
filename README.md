@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://your-solution-url.com)
-- Live Site URL: [](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-BKGDbYCVa_)
+- Live Site URL: [Netlify](https://rest-api-countries-christopherii.netlify.app/)
 ## My Process
 
 
